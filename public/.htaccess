@@ -1,0 +1,20 @@
+import os
+
+public_directory = 'public'
+
+if not os.path.exists(public_directory):
+    os.makedirs(public_directory)
+
+file_path = os.path.join(public_directory, '.htaccess')
+
+htaccess_content = """
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+"""
+
+with open(file_path, 'w') as file:
+    file.write(htaccess_content)
