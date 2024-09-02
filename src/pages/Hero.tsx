@@ -22,7 +22,7 @@ const Hero = () => {
                 <Button 
                     className="rounded-full font-light text-white px-[60px] py-[25px] drop-shadow-lg"
                     onClick={() => window.location.href = 'mailto:kintarokawai@gmail.com'}
-                >Say Hi!
+                >Let's chat
                 </Button>
                 <span className="absolute right-0 top-0 flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
