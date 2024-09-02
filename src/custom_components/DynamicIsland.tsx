@@ -24,11 +24,11 @@ export default function DynamicIsland() {
 
   return (
     <div>
-      <div className="flex justify-center h-[8rem] drop-shadow-md">
+      <div className="flex justify-center h-[8rem]">
         <motion.div
           layout
           style ={{ borderRadius: 10, backgroundColor: "white"}}
-          className="h-fit overflow-hidden"
+          className="h-fit overflow-hidden drop-shadow-md"
           onMouseEnter={() => setView("open")}
           onMouseLeave={() => setView("idle")}
         >
