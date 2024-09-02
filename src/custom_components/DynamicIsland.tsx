@@ -24,7 +24,7 @@ export default function DynamicIsland() {
 
   return (
     <div>
-      <div className="flex justify-center h-[11rem] lg:h-[8rem] p-5">
+      <div className="flex justify-center h-[11rem] lg:h-[8rem] p-5 z-[50]">
         <motion.div
           layout
           style ={{ borderRadius: 10, backgroundColor: "white"}}
