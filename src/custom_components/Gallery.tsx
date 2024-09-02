@@ -80,44 +80,44 @@ function GalleryContainer({ item }: { item: GalleryItem }) {
       </div>
       <AnimatePresence>
         <motion.div 
-          className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-[1rem] border border-neutral-100 justify-start items-start px-8 py-6 w-full text-start"
-          initial={{ y: '75%' }}
-          animate={{ y: hover ? '60%' : '75%' }}
+          className="absolute inset-x-0 bottom-0 bg-white/80 backdrop-blur-sm rounded-[1rem] border border-neutral-100 justify-start items-start px-8 py-6 w-full text-start"
+          initial={{ y: '100%' }}
+          animate={{ y: hover ? '0%' : '100%' }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
         >
           <div className='flex flex-col font-inter gap-2'>
             <p className='font-medium text-[1.2rem] ml-2'>
               {item.title}
             </p>
-            <div className='flex gap-4 justify-start items-center'>
+            <div className='flex gap-3 lg:gap-4 justify-start items-center'>
               <div className='flex gap-2'>
                 {item.projectType.map((projecttype) => (
-                  <p className='bg-white rounded-full border border-neutral-200 py-1 px-3 text-[0.8rem]'>
+                  <p className='bg-white rounded-full border border-neutral-200 py-[3px] px-[8px] lg:py-1 lg:px-3 text-[0.6rem] lg:text-[0.8rem]'>
                     {projecttype}
                   </p>
                 ))}
               </div>
-              <p className='text-neutral-500'>
+              <p className='text-neutral-500 text-[0.8rem] lg:text-[1rem]'>
                 {item.completionStatus}
               </p>
             </div>
           </div>
           <section className='flex flex-col gap-5'>
-            <p className='mt-5'>
+            <p className='mt-5 text-[0.8rem] lg:text-[1rem]'>
               {item.description}
             </p>
           </section>
           {hover && (
-            <motion.div className='flex gap-2 absolute right-8 top-6'>
+            <motion.div className='flex gap-2 absolute right-6 lg:right-8 top-6'>
               <a 
                 href={readMoreLink}
-                className='flex rounded-full py-1 px-4 font-light text-[0.8rem] bg-white border border-neutral-50 justify-center items-center'
+                className='flex rounded-full py-[3px] px-[10px] lg:py-1 lg:px-4 font-light text-[0.6rem] lg:text-[0.8rem] bg-white border border-neutral-50 justify-center items-center'
               >
                 Read more
               </a>
               <a 
                 href={item.websiteLink}
-                className='flex rounded-full py-1 px-4 font-light text-[0.8rem] bg-primary text-white justify-center items-center'
+                className='flex rounded-full py-[3px] px-[10px] lg:py-1 lg:px-4 font-light text-[0.6rem] lg:text-[0.8rem] bg-primary text-white justify-center items-center'
                 target="_blank"
                 rel="noopener noreferrer"
               >

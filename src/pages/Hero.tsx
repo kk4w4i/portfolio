@@ -12,7 +12,7 @@ const Hero = () => {
             
             <DynamicIsland/>
             
-            <p className="text-center text-[24px] lg:text-[40px] mt-[10vh] lg:mt-[12vh] max-w-[50vw] lg:max-w-[40vw] font-regular leading-[2rem] lg:leading-[3.5rem]">
+            <p className="text-center text-[24px] lg:text-[40px] mt-[5vh] lg:mt-[12vh] max-w-[60vw] lg:max-w-[40vw] font-regular leading-[2rem] lg:leading-[3.5rem]">
                 Hi my name is Kintaro, an aspiring product developer, with an interest in design.
             </p>
 
