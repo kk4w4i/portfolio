@@ -65,9 +65,7 @@ function GalleryContainer({ item }: { item: GalleryItem }) {
   const readMoreLink = `/projects/${item.title.toLowerCase().replace(/\s+/g, '-')}`;
 
   const toggleExpand = () => {
-    if (isExpanded) {
-      setIsExpanded(!isExpanded);
-    }
+    setIsExpanded(!isExpanded);
   };
 
   return (
