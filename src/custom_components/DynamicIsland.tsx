@@ -28,7 +28,7 @@ export default function DynamicIsland() {
         <motion.div
           layout
           style ={{ borderRadius: 10, backgroundColor: "white"}}
-          className="h-fit overflow-hidden drop-shadow-md"
+          className="h-fit overflow-hidden"
           onMouseEnter={() => setView("open")}
           onMouseLeave={() => setView("idle")}
         >
