@@ -135,15 +135,18 @@ function GalleryContainer({ item }: { item: GalleryItem }) {
               >
                 Read more
               </a>
-              <a 
-                href={item.websiteLink}
-                className='flex rounded-full py-[3px] px-[10px] lg:py-1 lg:px-4 font-light text-[0.6rem] lg:text-[0.8rem] bg-primary text-white justify-center items-center'
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-              >
-                Visit site
-              </a>
+              {item.websiteLink === "" ? <></> :
+                <a 
+                  href={item.websiteLink}
+                  className='flex rounded-full py-[3px] px-[10px] lg:py-1 lg:px-4 font-light text-[0.6rem] lg:text-[0.8rem] bg-primary text-white justify-center items-center'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Visit site
+                </a>
+              }
+              
             </div>
           </motion.div>
         )}

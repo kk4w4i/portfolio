@@ -11,7 +11,9 @@ enum ProjectType {
   fullstack = "Full Stack",
   frontend = "Frontend",
   backend = "Backend",
-  design = "Design"
+  design = "Design",
+  mobile = "Mobile",
+  ml = "ML"
 }
   
   const projectDetails: GalleryItem[] = [
@@ -30,6 +32,14 @@ enum ProjectType {
       completionStatus: "2024",
       projectType: [ProjectType.fullstack, ProjectType.design],
       imageDirectory: "codeclash"
+    },
+    {
+      title: "Auzi",
+      description: "Auzi seeks to bridge the cultural gap for elderly immigrants in Australia by using LLM and SRMs to offer real-time translations that account for local slang and nuances.",
+      websiteLink: "",
+      completionStatus: "2024",
+      projectType: [ProjectType.fullstack, ProjectType.mobile, ProjectType.ml],
+      imageDirectory: "auzi"
     },
   ];
   
