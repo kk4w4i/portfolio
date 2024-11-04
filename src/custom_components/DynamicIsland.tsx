@@ -14,7 +14,7 @@ export default function DynamicIsland() {
       case "idle":
         return (
             <div>
-                <Avatar className="size-[2.5rem]">
+                <Avatar className="size-[2rem] md:size-[2.5rem] rounded-lg">
                     <AvatarImage className="object-cover" src={pfp} />
                 </Avatar>
             </div>
@@ -23,18 +23,20 @@ export default function DynamicIsland() {
   }, [view]);
 
   return (
-    <div>
-      <div className="flex justify-center h-[11rem] lg:h-[8rem] p-5 z-[50]">
+      <div className="flex justify-center items-center z-[50]">
         <motion.div
           layout
-          style ={{ borderRadius: 10, backgroundColor: "white"}}
-          className="h-fit overflow-hidden"
+          style={{
+            borderRadius: 10,
+            backgroundColor: "white",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)"
+          }}
+          className="h-fit absolute right-0 md:right-auto w-fit"
           onMouseEnter={() => setView("open")}
           onMouseLeave={() => setView("idle")}
         >
           {content}
         </motion.div>
       </div>
-    </div>
   );
 }
